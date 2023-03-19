@@ -126,13 +126,13 @@ export default function Feedback(){
     const leaveFeedback=(event)=>{
         switch(event.target.name){
             case "goodBtn":
-                setGoodVout(goodVout+1);
+                setGoodVout(prevState=>prevState+1);
             break;
             case "neutralBtn":
-                setNeutralVout(neutralVout+1);
+                setNeutralVout(prevState=>prevState+1);
             break;
             case "badBtn":
-                setBadVout(badVout+1);
+                setBadVout(prevState=>prevState+1);
             break;
             default: 
             break;
